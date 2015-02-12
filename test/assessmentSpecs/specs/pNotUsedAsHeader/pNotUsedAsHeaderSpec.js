@@ -56,4 +56,12 @@ describe('assessment: pNotUsedAsHeader', function () {
   it('passes on regular paragraphs', function() {
     expect(cases).quailGetById('regular-paragraph').to.have.quailStatus('passed');
   });
+
+  it('passes on paragraph in blockquote', function() {
+    expect(cases).quailGetById('paragraph-in-blockquote').to.have.quailStatus('passed');
+  });
+
+  it('is not affected by preceeding element', function() {
+    expect(cases).quailGetById('paragraph-after-styled-table').to.have.quailStatus('passed');
+  });
 });
