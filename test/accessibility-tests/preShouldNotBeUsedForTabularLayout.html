@@ -16,6 +16,22 @@ small 5     7
 		<pre>No table here</pre>
 	</div>
 
+	<div class="quail-test" data-expected="pass" data-accessibility-test="preShouldNotBeUsedForTabularLayout">
+		<pre><code>		// This is
+		// harmless code listing.
+		var foo = "bar";</code></pre>
+	</div>
+
+	<div class="quail-test" data-expected="pass" data-accessibility-test="preShouldNotBeUsedForTabularLayout">
+		<pre>
+		  (__)
+		  (oo)
+   /-------\/
+  / |     ||
+ *  ||----||
+	^^    ^^</pre>
+	</div>
+
 	<script src="../quail-testrunner.js"></script>
 </body>
 </html>
