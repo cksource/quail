@@ -18,6 +18,7 @@
 			<br/>
 		</p>
 	</div>
+
 	<div class="quail-test" data-expected="fail" data-accessibility-test="documentVisualListsAreMarkedUp">
 
 		<p class="quail-failed-element">
@@ -82,7 +83,21 @@
 			♦ bananna
 			<br/>
 		</p>
-	</div>	
+	</div>
+	<!-- Having custom attributes in br should not disturb the results. -->
+	<div class="quail-test" data-expected="fail" data-accessibility-test="documentVisualListsAreMarkedUp">
+
+		<p class="quail-failed-element">
+			* chocolate
+			<br data-fake="1" />
+			* vanilla
+			<br data-fake="1" />
+			* cherry
+			<br data-fake="1" />
+			* bananna
+			<br data-fake="1" />
+		</p>
+	</div>
 	<div class="quail-test" data-expected="pass" data-accessibility-test="documentVisualListsAreMarkedUp">
 
 		<p>
