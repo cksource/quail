@@ -85,6 +85,46 @@
     </table>
   </div>
 
+  <!--Should not fail if headers attr ids are separated by more than one space.-->
+  <div class="quail-test" data-expected="pass" data-accessibility-test="tableShouldUseHeaderIDs">
+    <table>
+      <tr>
+        <th id="s1">Homework</th>
+        <th id="s2">Exams</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td headers="s1   s2">2</td>
+      </tr>
+      <tr>
+        <td>15%</td>
+        <td>15%</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <!--Test should not fail if any of headers does not contain id attribute.-->
+  <div class="quail-test" data-expected="pass" data-accessibility-test="tableShouldUseHeaderIDs">
+    <table>
+      <tr>
+        <th>Homework</th>
+        <th id="m2">Exams</th>
+        <th id="m3">Projects</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td headers="m2 m3">2</td>
+        <td headers="m2 m3">2</td>
+      </tr>
+      <tr>
+        <td>15%</td>
+        <td>15%</td>
+        <td>15%</td>
+      </tr>
+    </table>
+  </div>
+
   <div class="quail-test" data-expected="pass" data-accessibility-test="tableShouldUseHeaderIDs">
     <table>
       <tr>
