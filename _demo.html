@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Issue sample</title>
+	</head>
+	<body>
+		<h1>Double keydown "result"</h1>
+		<p>
+			This issue occurs only on FireFox. Use <kbd>ctrl+alt+e</kbd> hotkey to trigger content checking. Note that selection <strong>must be</strong> in div#selectionContainer.
+		</p>
+		<p>
+			You should have one &quot;e&quot; (or related diacritic depending on your language) for each hotkey press. This is because we dont' cancel the event. Instead it will insert 2 characters in FireFox.
+		</p>
+		<p>
+			What about canceled event? Well if you'll cancel the event it will still insert 1 character, even though you explicitly denied it.
+		</p>
+		
+		<h2>Editable:</h2>
+		<div id="selectionContainer" contenteditable="true">Put your selection here</div>
+		
+		<h2>Examined content:</h2>
+		<div id="sampleContent">
+			<p>This element contains <b>bold</b>.</p>
+		</div>
+		
+		<script src="lib/jquery/jquery.js"></script>
+		<script src="dist/quail.jquery.js"></script>
+		<script>
+			var selectionContainer = document.getElementById( 'selectionContainer' ),
+				KEY_CODES = {
+					E_KEY: 69
+				};
+				
+			// Focus the container, so we don't need to do it manually.
+			selectionContainer.focus();
+			
+			selectionContainer.addEventListener( 'keydown', function( evt ) {
+				if ( evt.keyCode === KEY_CODES.E_KEY && ( evt.metaKey || evt.ctrlKey ) && evt.altKey ) {
+					// If it's our desired hotkey, then run Quail.
+					$( '#sampleContent' ).quail( {
+						guideline : [ 'boldIsNotUsed' ],
+						jsonPath: 'dist/',
+						testCollectionComplete: function ( eventName, testCollection ) {
+							console.info( 'Tests done' );
+						}
+					} );
+				}
+			} );
+		</script>
+	</body>
+</html>
