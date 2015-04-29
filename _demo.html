@@ -5,68 +5,49 @@
 		<title>Issue sample</title>
 	</head>
 	<body>
-		<h1>Double keydown "result"</h1>
+		<h1>Double keydown event</h1>
 		<p>
-			This issue occurs only on FireFox. Use <kbd>ctrl+alt+e</kbd> hotkey to trigger content checking. Note that selection <strong>must be</strong> in div#selectionContainer.
+			This issue occurs only on FireFox. Use <kbd>Enter</kbd> key to trigger sync AJAX request. Note that selection <strong>must be</strong> in <code>div#selectionContainer</code>.
 		</p>
 		<p>
-			You should have one &quot;e&quot; (or related diacritic depending on your language) for each hotkey press. This is because we dont' cancel the event. Instead it will insert 2 characters in FireFox.
+			You should have one new line inserted for press. This is because we don&apos;t cancel the event. But it turns that FF will insert 2 line breaks.
 		</p>
 		<p>
-			What about canceled event? Well if you'll cancel the event it will still insert 1 character, even though you explicitly denied it.
+			What about canceled event? Well if you'll cancel the event it will still insert 1 line break, even though you explicitly denied it.
 		</p>
 		
 		<h2>Editable:</h2>
 		<div id="selectionContainer" contenteditable="true">Put your selection here</div>
 		
-		<h2>Examined content:</h2>
-		<div id="sampleContent">
-			<p>This element contains <b>bold</b>.</p>
-		</div>
-		
-		<script src="lib/jquery/jquery.js"></script>
 		<script>
 			var selectionContainer = document.getElementById( 'selectionContainer' ),
 				KEY_CODES = {
 					E_KEY: 69,
-					SPACE: 32
+					SPACE: 32,
+					ENTER: 13
 				};
 			
-			function macro( msg ) {
-				console.log( 'macro:' + ( msg || '' ), selectionContainer.innerHTML );
-			}
-				
 			// Focus the container, so we don't need to do it manually.
 			selectionContainer.focus();
 			
 			selectionContainer.addEventListener( 'keydown', function( evt ) {
-				if ( evt.keyCode === KEY_CODES.E_KEY && ( evt.metaKey || evt.ctrlKey ) && evt.altKey ) {
+				// Listen to keydown event and dispatch a synchronous AJAX request.
+				if ( evt.keyCode === KEY_CODES.ENTER ) {
 					var request = new XMLHttpRequest();
-					request.open('GET', 'dist/tests.json', false);  // `false` makes the request synchronous
-					//request.open('GET', 'dist/tests.json');  // async
-					
-					request.onload = function() {
-						if (request.readyState === 4) { 
-							if (request.status === 200) {
-								macro( 'ajax done' );
-							} else {
-								console.error(request.statusText);
-							}
-						}
-					};
-
+					// Don't worry, it doesn't matter if we get 404.
+					request.open('GET', 'dist/tests.json', false);  // `false` for synchronous request.
 					request.send(null);
 				}
 			} );
 			
 			selectionContainer.addEventListener( 'keypress', function( evt ) {
-				if ( evt.key === 'e' || evt.key === 'ę' ) {
+				if ( evt.key === 'Enter' ) {
 					console.log( 'keypress', evt );
 				}
 			} );
 			
 			selectionContainer.addEventListener( 'keyup', function( evt ) {
-				if ( evt.keyCode === KEY_CODES.E_KEY ) {
+				if ( evt.keyCode === KEY_CODES.ENTER ) {
 					console.log( 'keyup', evt );
 				}
 			} );
