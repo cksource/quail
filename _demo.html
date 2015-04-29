@@ -28,7 +28,8 @@
 		<script>
 			var selectionContainer = document.getElementById( 'selectionContainer' ),
 				KEY_CODES = {
-					E_KEY: 69
+					E_KEY: 69,
+					SPACE: 32
 				};
 			
 			function macro( msg ) {
@@ -40,18 +41,21 @@
 			
 			selectionContainer.addEventListener( 'keydown', function( evt ) {
 				if ( evt.keyCode === KEY_CODES.E_KEY && ( evt.metaKey || evt.ctrlKey ) && evt.altKey ) {
-					console.log( 'keydown', evt );
+					var request = new XMLHttpRequest();
+					request.open('GET', 'dist/tests.json', false);  // `false` makes the request synchronous
+					//request.open('GET', 'dist/tests.json');  // async
 					
-					$.ajax({
-						url : 'dist/tests.json',
-						async : false,
-						success : function (data) {
-							macro( 'ajax done' );
-						},
-						error : function () {
-						  throw new Error('Tests could not be loaded');
+					request.onload = function() {
+						if (request.readyState === 4) { 
+							if (request.status === 200) {
+								macro( 'ajax done' );
+							} else {
+								console.error(request.statusText);
+							}
 						}
-					});
+					};
+
+					request.send(null);
 				}
 			} );
 			
