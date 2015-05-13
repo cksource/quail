@@ -46,7 +46,6 @@ function validateFilePath (filepath) {
   try {
     stat = fs.statSync(path.join(__dirname, '..', filepath));
     if (stat.isFile()) {
-      debugger;
       return path.join(__dirname, '..', filepath);
     }
   }
@@ -57,7 +56,6 @@ function validateFilePath (filepath) {
   try {
     stat = fs.statSync(filepath);
     if (stat.isFile()) {
-      debugger;
       return filepath;
     }
   }
@@ -99,7 +97,7 @@ else {
 }
 
 // Determine the configuration file path.
-var configFilePath = path.join(__dirname, '..', 'config/phantomjs-config.json');
+var configFilePath = path.join(__dirname, '..', 'config/config.json');
 if (program.config) {
   configFilePath = program.config;
 }
