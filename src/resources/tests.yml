@@ -2508,7 +2508,7 @@ imgHasAlt:
   type: "selector"
   testability: 1
   title:
-    en: "Image elements must provide alternative text"
+    en: "Images must provide alternative text"
     nl: "##missing##"
   description:
     en: "Alternative text need to convey the same information as the image. This text will be used when the browser has disabled images, image was not found on the server or by non-sighted visitors who uses screen reader."
@@ -4536,8 +4536,8 @@ tableDataShouldHaveTh:
   type: "selector"
   testability: 1
   title:
-    en: "Data tables should contain \"th\" elements"
-    nl: "Datatabellen moeten \"th\"-elementen bevatten"
+    en: "Data tables should contain header"
+    nl: "##missing##"
   description:
     en: "Tables which contain data (as opposed to layout tables) should contain proper table header elements to mark them for screen readers and enhance the structure of the document."
     nl: "##missing##"
