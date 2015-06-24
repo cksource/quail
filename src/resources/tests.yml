@@ -5,7 +5,7 @@ aAdjacentWithSameResourceShouldBeCombined:
     en: "Adjacent links that point to the same location should be merged"
     nl: "Voeg naast elkaar gelegen links die naar dezelfde locatie verwijzen samen"
   description:
-    en: "Because many users of screen-readers use links to navigate the page, providing two links right next to each other that point to the same location can be confusing. Try combining the links."
+    en: "Because many users of screen readers use links to navigate the page, providing two links right next to each other that point to the same location can be confusing. Try combining the links."
     nl: "Veel gebruikers van schermlezers gebruiken links om op de pagina te navigeren. Voor hen zijn naast elkaar gelegen links die naar dezelfde locatie verwijzen verwarrend. Probeer de links samen te voegen."
   guidelines:
     wcag:
@@ -27,7 +27,7 @@ aImgAltNotRepetitive:
   type: "custom"
   testability: 1
   title:
-    en: "Alternative text for image in a link, should not repeat text in the link"
+    en: "Alternative text for image in a link should not repeat the text in the link"
     nl: "##missing##"
   description:
     en: "Images within a link should not have an alt attribute that simply repeats the text found in the link. This will cause screen readers to simply repeat the text twice."
@@ -635,7 +635,7 @@ blockquoteNotUsedForIndentation:
     en: "The block quote should not be used just for indentation"
     nl: "##missing##"
   description:
-    en: "Blockquote tags are for long-form quotes, and should not be used to indent text."
+    en: "Blockquote tags are for longer quotes, and should not be used to indent text."
     nl: "##missing##"
   guidelines:
     wcag:
@@ -1336,10 +1336,10 @@ documentVisualListsAreMarkedUp:
   type: "custom"
   testability: 1
   title:
-    en: "Lists of items are marked using list markup"
+    en: "Lists of items should be marked using list markup"
     nl: "##missing##"
   description:
-    en: "Use the ordered or unordered (bullet) list elements to mark lists, instead of just using new lines which start with numbers or characters to create a visual list."
+    en: "Use the ordered or unordered (bulleted) list elements to mark lists instead of using new lines that start with numbers or other characters to create a visual list."
     nl: "##missing##"
   guidelines:
     wcag:
@@ -2367,7 +2367,7 @@ imgAltIsDifferent:
     en: "Image alternative text should not be the same as the file name"
     nl: "##missing##"
   description:
-    en: "All images should have a meaningful alternative text. File name contains less readable information, and not always reflect information presented by the image."
+    en: "All images should have a meaningful alternative text. The file name is rarely meaningful and does not always reflect information presented by the image."
     nl: "##missing##"
   guidelines:
     508:
@@ -2409,7 +2409,7 @@ imgAltIsTooLong:
     en: "Image alternative text is too long"
     nl: "##missing##"
   description:
-    en: "Image alternative text should be clear and concise. Alternative text longer than 100 characters should be reviewed to see if they can be reduced."
+    en: "Image alternative text should be clear and concise. Alternative text longer than 100 characters should be reviewed to see if it can be shortened."
     nl: "##missing##"
   guidelines:
     508:
@@ -2511,7 +2511,7 @@ imgHasAlt:
     en: "Images must provide alternative text"
     nl: "##missing##"
   description:
-    en: "Alternative text need to convey the same information as the image. This text will be used when the browser has disabled images, image was not found on the server or by non-sighted visitors who uses screen reader."
+    en: "Alternative text needs to convey the same information as the image. This text will be used when the browser has disabled images, the image was not found on the server, or by non-sighted visitors who use screen readers."
     nl: "##missing##"
   guidelines:
     508:
@@ -3792,7 +3792,7 @@ pNotUsedAsHeader:
     en: "Paragraphs must not be used for headers"
     nl: "Alinea's worden niet gebruikt als header"
   description:
-    en: "Headers are extremely useful for non-sighted users to navigate the structure of the page. Formatting a paragraph to just be big or bold, while it might visually look like a header, does not make it one."
+    en: "Headers are extremely useful for non-sighted users to navigate the structure of the page. Formatting a paragraph to just be big or bold, while it might visually look like a header, does not make it a header."
     nl: "##missing##"
   guidelines:
     wcag:
@@ -4536,7 +4536,7 @@ tableDataShouldHaveTh:
   type: "selector"
   testability: 1
   title:
-    en: "Data tables should contain header"
+    en: "Data tables should contain a header"
     nl: "##missing##"
   description:
     en: "Tables which contain data (as opposed to layout tables) should contain proper table header elements to mark them for screen readers and enhance the structure of the document."
