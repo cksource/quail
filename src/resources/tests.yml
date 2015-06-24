@@ -1958,7 +1958,7 @@ headerH1:
   type: "headingLevel"
   testability: 0
   title:
-    en: "Header level 1 should not be followed by level 3 through level 6"
+    en: "Header level 1 can only be followed by level 2"
     nl: "##missing##"
   description:
     en: "Header order should not skip a level. Do not follow a header level 1 with a level 3, 4, 5, or 6."
@@ -2000,7 +2000,7 @@ headerH2:
   type: "headingLevel"
   testability: 0
   title:
-    en: "Header level 2 should not be followed by level 4 through level 6"
+    en: "Header level 2 can not be followed by levels from 4 to 6"
     nl: "##missing##"
   description:
     en: "Header order should not skip a level. Do not follow a header level 2 with a level 4, 5, or 6."
@@ -2042,7 +2042,7 @@ headerH3:
   type: "headingLevel"
   testability: 0
   title:
-    en: "The header following an h3 is not an h5 or h6"
+    en: "Header level 3 can not be followed by levels 5 and 6"
     nl: "##missing##"
   description:
     en: "Header order should not skip a level. Do not follow a header level 3 with a level 5 or 6."
@@ -2084,7 +2084,7 @@ headerH4:
   type: "headingLevel"
   testability: 0
   title:
-    en: "Header level 4 should not be followed by level 6"
+    en: "Header level 4 can not be followed by level 6"
     nl: "##missing##"
   description:
     en: "Header order should not skip a level. Do not follow a header level 4 with level 6 header."
