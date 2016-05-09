@@ -2184,7 +2184,7 @@ headersHaveText:
     en: "All headers should contain readable text"
     nl: "Alle headers moeten leesbare tekst bevatten"
   description:
-    en: "Users with screen readers use headings like the tabs <code>h1</code> to navigate the structure of a page. All headings should contain either text, or images with appropriate <code>alt</code> attributes."
+    en: "Users with screen readers use headings (e.g. <code>h1</code> elements), just like the tabs to navigate the structure of a page. All headings should contain either text, or images with appropriate alternative text."
     nl: "Gebruikers van schermlezers gebruiken headers om via de structuur van een pagina te navigeren. Alle headers moeten daarom tekst bevatten of afbeeldingen met toepasselijk <code>alt</code>-attributen."
   guidelines:
     wcag:
