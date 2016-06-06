@@ -7,7 +7,7 @@ aAdjacentWithSameResourceShouldBeCombined:
     nl: "Voeg naast elkaar gelegen links die naar dezelfde locatie verwijzen samen"
   description:
     de: "Da viele Benutzer von Bildschirmleseprogrammen Verknüpfungen verwenden, um auf der Seite zu navigieren, können zwei Verknüpfungen direkt nebeneinander verwirrend sein. Versuchen Sie, die Verknüpfungen zusammenzuführen."
-    en: "Because many users of screen-readers use links to navigate the page, providing two links right next to each other that point to the same location can be confusing. Try combining the links."
+    en: "Because many users of screen readers use links to navigate the page, providing two links right next to each other that point to the same location can be confusing. Try combining the links."
     nl: "Veel gebruikers van schermlezers gebruiken links om op de pagina te navigeren. Voor hen zijn naast elkaar gelegen links die naar dezelfde locatie verwijzen verwarrend. Probeer de links samen te voegen."
   guidelines:
     wcag:
@@ -30,7 +30,7 @@ aImgAltNotRepetitive:
   testability: 1
   title:
     de: "Alternativtexte für Grafiken, die in einer Verknüpfung eingebettet sind, sollten den Verknüpfungstext nicht wiederholen"
-    en: "When an image is in a link, its \"alt\" attribute should not repeat other text in the link"
+    en: "Alternative text for image in a link should not repeat the text in the link"
     nl: "Als een link een afbeelding bevat, moet het \"alt\"-attribuut niet dezelfde tekst bevatten als de linktekst"
   description:
     de: "Grafiken mit einer Verknüpfung sollten keinen Alternativtext haben, der den Verknüpfungstext wiederholt. Das sorgt dafür, dass Bildschirmleseprogramme den Text doppelt vorlesen."
@@ -694,11 +694,11 @@ blockquoteNotUsedForIndentation:
   testability: 0.5
   title:
     de: "Der \"blockquote\"-Tag sollte nicht zur Einrückung verwnendet werden"
-    en: "The \"blockquote\" tag should not be used just for indentation"
+    en: "The block quote should not be used just for indentation"
     nl: "De \"blockquote\"-tag mag niet gebruikt worden om in te springen"
   description:
     de: "Blockquotes sind für längere Zitate gedacht und sollten nicht zum Einrücken von Text verwendet werden."
-    en: "Blockquote tags are for long-form quotes, and should not be used to indent paragraphs. Use CSS to indent the paragraph instead."
+    en: "Blockquote tags are for longer quotes, and should not be used to indent text."
     nl: "Blockquotes zijn bedoeld voor lange stukken geciteerde tekst, en niet om tekst te laten inspringen."
   guidelines:
     wcag:
@@ -1466,11 +1466,11 @@ documentVisualListsAreMarkedUp:
   testability: 1
   title:
     de: "Listen sollten mittels Listen-Markup deklariert werden"
-    en: "Visual lists of items are marked using ordered or unordered lists"
+    en: "Lists of items should be marked using list markup"
     nl: "Lijsten moeten gemarkeerd worden als ordered of unordered lists"
   description:
     de: "Verwende die sortierten (<code>ol</code>) oder unsortierten (<code>ul</code>) Listen-Elemente anstelle von Zeilenumbrüchen mit Zahlen oder Zeichen, um Listen auszuzeichen."
-    en: "Use the ordered (<code>ol</code>) or unordered (<code>ul</code>) elements for lists of items, instead of just using new lines which start with numbers or characters to create a visual list."
+    en: "Use the ordered or unordered (bulleted) list elements to mark lists instead of using new lines that start with numbers or other characters to create a visual list."
     nl: "Gebruik ordered (<code>ol</code>) of unordered (<code>ul</code>) elementen voor lijsten, in plaats van een nieuwe regel per item aan te maken die je laat beginnen met een nummer of teken om een visuele lijst te maken."
   guidelines:
     wcag:
@@ -1518,7 +1518,7 @@ elementAttributesAreValid:
     nl: "Attributen moeten gescheiden zijn door spaties en ze moeten tussen aanhalingstekens"
   description:
     de: "Attribute sollten mit Leerzeichen getrennt sein und in Anführungszeichen gesetzt werden."
-    en: "Attributes should have spaces between them and be wrapped in quotes."
+    en: "Attributes should have spaces between them and be wrapped in quotes"
     nl: "Tussen attributen moeten spaties staan en ze moeten tussen aanhalingstekens staan."
   guidelines:
     4.1.1:
@@ -2152,11 +2152,11 @@ headerH1:
   testability: 0
   title:
     de: "Überschriften mit Level 1 können nur gefolgt werden von Level 2"
-    en: "The header following an h1 is not h3 through h6"
+    en: "Header level 1 can only be followed by level 2"
     nl: "De header die volgt op een h1 is niet h3 tot h6"
   description:
     de: "Überschriften sollten keinen Level überspringen. Auf eine <code>h1</code>-Überschrift sollte kein <code>h3</code>, <code>h4</code>, <code>h5</code> oder <code>h6</code> folgen."
-    en: "Header order should not skip a level. Do not follow a <code>h1</code> header with a <code>h3</code>, <code>h4</code>, <code>h5</code>, or <code>h6</code>."
+    en: "Header order should not skip a level. Do not follow a header level 1 with a level 3, 4, 5, or 6."
     nl: "Headers mogen geen niveau overslaan. Laat een <code>h1</code>-header niet volgen door een <code>h3</code>, <code>h4</code>, <code>h5</code>, of <code>h6</code>."
   guidelines:
     wcag:
@@ -2198,11 +2198,11 @@ headerH2:
   testability: 0
   title:
     de: "Überschriften mit Level 2 können nicht gefolgt werden von Level 4 bis 6"
-    en: "The header following an h2 is not h4, h5, or h6"
+    en: "Header level 2 can not be followed by levels from 4 to 6"
     nl: "De header volgend op een h2 is geen h4, h5, of h6"
   description:
     de: "Überschriften sollten keinen Level überspringen. Auf eine <code>h2</code>-Überschrift sollte kein <code>h4</code>, <code>h5</code> oder <code>h6</code> folgen."
-    en: "Header order should not skip a level. Do not follow a <code>h2</code> header with a <code>h4</code>, <code>h5</code>, or <code>h6</code>."
+    en: "Header order should not skip a level. Do not follow a header level 2 with a level 4, 5, or 6."
     nl: "Headers mogen geen niveau overslaan. Laat een <code>h2</code>-header niet volgen door een <code>h4</code>, <code>h5</code>, of <code>h6</code>."
   guidelines:
     wcag:
@@ -2244,11 +2244,11 @@ headerH3:
   testability: 0
   title:
     de: "Überschriften mit Level 3 können nicht gefolgt werden von Level 5 und 6"
-    en: "The header following an h3 is not an h5 or h6"
+    en: "Header level 3 can not be followed by levels 5 and 6"
     nl: "De header volgend op een h3 is geen h5, of h6"
   description:
     de: "Überschriften sollten keinen Level überspringen. Auf eine <code>h3</code>-Überschrift sollte kein <code>h5</code> oder <code>h6</code> folgen."
-    en: "Header order should not skip a level. Do not follow a <code>h3</code> header with a <code>h5<code> or <code>h6</code>."
+    en: "Header order should not skip a level. Do not follow a header level 3 with a level 5 or 6."
     nl: "Headers mogen geen niveau overslaan. Laat een <code>h3</code>-header niet volgen door een <code>h5</code>, of <code>h6</code>."
   guidelines:
     wcag:
@@ -2290,11 +2290,11 @@ headerH4:
   testability: 0
   title:
     de: "Überschriften mit Level 4 können nicht gefolgt werden von Level 6"
-    en: "The header following an h4 is not an h6"
+    en: "Header level 4 can not be followed by level 6"
     nl: "De header volgend op een h4 is geen h6"
   description:
     de: "Überschriften sollten keinen Level überspringen. Auf eine <code>h4</code>-Überschrift sollte kein <code>h6</code> folgen."
-    en: "Header order should not skip a level. Do not follow a <code>h4</code> haeder with a <code>h6</code>."
+    en: "Header order should not skip a level. Do not follow a header level 4 with level 6 header."
     nl: "Headers mogen geen niveau overslaan. Laat een <code>h4/code> header niet volgen door een <code>h6</code>."
   guidelines:
     wcag:
@@ -2402,7 +2402,7 @@ headersHaveText:
   description:
     de: "Benutzer mit Bildschirmleseprogrammen verwenden Überschriften wie Tabulatoren, um über die Seitenstruktur zu navigieren."
     en: "Users with screen readers use headings (e.g. <code>h1</code> elements), just like the tabs to navigate the structure of a page. All headings should contain either text, or images with appropriate alternative text."
-    nl: "Gebruikers van schermlezers gebruiken headers om via de structuur van een pagina te navigeren. Alle headers moeten daarom tekst bevatten of afbeeldingen met toepasselijk <code>alt</code>-attributen."
+    nl: "Gebruikers van schermlezers gebruiken headers om via de structuur van een pagina te navigeren. Alle headers moeten daarom tekst bevatten of afbeeldingen met toepasselijk <em>alt</em>-attributen."
   guidelines:
     wcag:
       1.3.1:
@@ -2600,11 +2600,11 @@ imgAltIsDifferent:
   testability: 0.5
   title:
     de: "Der Alternativtext einer Grafik sollte nicht mit dem Dateinamen übereinstimmen"
-    en: "Image \"alt\" attributes should not be the same as the filename"
+    en: "Image alternative text should not be the same as the file name"
     nl: "\"Alt\"-attributen van afbeeldingen moeten niet hetzelfde zijn als de bestandsnaam"
   description:
     de: "Jede Grafik sollte einen aussagekräftigen Alternativtext haben. Der Dateiname ist selten aussagekräftig und reflektiert nicht immer die in der Grafik dargestellte Information."
-    en: "All <code>img</code> elements should have an \"alt\" attribute that is not just the name of the file"
+    en: "All images should have a meaningful alternative text. The file name is rarely meaningful and does not always reflect information presented by the image."
     nl: "Alle <code>img</code>-elementen moeten een \"alt\"-attribuut hebben dat anders is dan de bestandsnaam van de afbeelding."
   guidelines:
     508:
@@ -2646,11 +2646,11 @@ imgAltIsTooLong:
   testability: 1
   title:
     de: "Der Alternativtext der Grafik ist zu lang"
-    en: "Image Alt text is too long"
+    en: "Image alternative text is too long"
     nl: "Altteksten voor een afbeelding zijn kort"
   description:
     de: "Der Alternativtext der Grafik sollte kurz und prägnant sein. Es sollte geprüft werden, ob Alternativtexte die länger als 100 Zeichen sind, gekürzt werden können"
-    en: "All \"alt\" attributes for <code>img</code> elements should be clear and concise. \"Alt\" attributes over 100 characters long should be reviewed to see if they are too long."
+    en: "Image alternative text should be clear and concise. Alternative text longer than 100 characters should be reviewed to see if it can be shortened."
     nl: "Alle \"alt\"-attributen voor <code>img</code>-elementen moeten duidelijk en bondig zijn. Verifieer \"alt\"-attributen langer dan 100 tekens en kort ze in waar mogelijk."
   guidelines:
     508:
@@ -2668,11 +2668,11 @@ imgAltNotEmptyInAnchor:
   testability: 1
   title:
     de: "Eine Grafik innerhalb einer Verknüpfung darf keinen leeren Alternativtext haben, wenn kein anderer Text in der Verknüpfung vorkommt"
-    en: "An image within a link cannot have an empty \"alt\" attribute if there is no other text within the link"
+    en: "An image within a link cannot have an empty alternative text if there is no other text within the link"
     nl: "Een afbeelding binnen een link mag geen leeg \"alt\"-attribuut hebben als er geen andere tekst is in de link"
   description:
     de: "Jede Grafik innerhalb einer Verknüpfung ohne Verknüpfungstext, darf keinen leeren Alternativtext haben"
-    en: "Any image that is within a link (an <code>a</code> element) that has no other text cannot have an empty or missing \"alt\" attribute."
+    en: "Any image that is within a link that has no other text cannot have an empty or missing alternative text."
     nl: "Elke afbeelding binnen een link (een <code>a</code>-element) die geen andere tekst heeft, mag geen leeg of ontbrekend \"alt\"-attribuut hebben."
   guidelines:
     508:
@@ -2758,11 +2758,11 @@ imgHasAlt:
   testability: 1
   title:
     de: "Grafiken sollten einen Alternativtext haben"
-    en: "Image elements must have an \"alt\" attribute"
+    en: "Images must provide alternative text"
     nl: "Afbeeldingselementen moeten een \"alt\"-attribuut hebben"
   description:
     de: "Der Alternativtext sollte dieselben Informationen liefern, wie die Grafik. Dieser Text wird verwendet, wenn Grafiken im Browser deaktiviert wurden, die Grafik auf dem Server nicht gefunden werden kann oder für sehbehinderte Benutzer, die ein Bildschirmleseprogramm verwenden."
-    en: "All <code>img</code> elements must have an alt attribute."
+    en: "Alternative text needs to convey the same information as the image. This text will be used when the browser has disabled images, the image was not found on the server, or by non-sighted visitors who use screen readers."
     nl: "Alle <code>img</code>-elementen moeten een \"alt\"-attribuut hebben."
   guidelines:
     508:
@@ -4174,7 +4174,7 @@ pNotUsedAsHeader:
     nl: "Alinea's worden niet gebruikt als header"
   description:
     de: "Überschriften sind für nicht-sehende Benutzer sehr nützlich um in der Seitenstruktur zu navigieren. Einen Paragraphen nur groß oder fett zu formatieren, damit es wie eine Überschrift aussieht, macht daraus keine Überschrift."
-    en: "Headers like <code>h1</code> - <code>h6</code> are extremely useful for non-sighted users to navigate the structure of the page, and formatting a paragraph to just be big or bold, while it might visually look like a header, does not make it one."
+    en: "Headers are extremely useful for non-sighted users to navigate the structure of the page. Formatting a paragraph to just be big or bold, while it might visually look like a header, does not make it a header."
     nl: "Headers van <code>h1</code> - <code>h6</code> zijn handig voor blinde en slechtziende gebruikers om door een pagina te navigeren. Maak alinea's daarom niet op zodat deze lijkt op een header. Dit werkt verwarrend."
   guidelines:
     wcag:
@@ -4375,29 +4375,6 @@ radioMarkedWithFieldgroupAndLegend:
     - "content"
   options:
     selector: "input[type=radio]:not(fieldset input[type=radio])"
-# scriptFocusIndicatorVisible:
-#   type: "custom"
-#   title:
-#     en: "Script focus indicators have high visibility"
-#     nl: "Script focus indicatoren zijn goed zichtbaar"
-#   description:
-#     en: "When a focus indicator is used with script, it should have enough contrast with the background and big enough to be highly visible."
-#     nl: "Wanneer je een focus indicator gebruikt met script, moet het contrast tussen de indicator en de achtergrond groot genoeg zijn in verband met de zichtbaarheid."
-#   guidelines:
-#     wcag:
-#       2.4.7:
-#         techniques:
-#           - "C15"
-#           - "G165"
-#           - "G195"
-#           - "SCR31"
-#   tags:
-#     - "focus"
-#     - "content"
-#   components:
-#     - "color"
-#     - "convertToPx"
-#   callback: "scriptFocusIndicatorVisible"
 scriptContentAccessibleWithScriptsTurnedOff:
   type: "selector"
   testability: 0
@@ -4977,11 +4954,11 @@ tableDataShouldHaveTh:
   testability: 1
   title:
     de: "Datentabellen sollten eine Überschrift haben"
-    en: "Data tables should contain \"th\" elements"
+    en: "Data tables should contain a header"
     nl: "Datatabellen moeten \"th\"-elementen bevatten"
   description:
     de: "Tabellen die Daten beinhalten (anders als Layout-Tabellen), sollten korrekte \"header\"-Elemente haben, um sie für Bildschirmleseprogramme hervorzuheben und die Struktur des Dokumentes zu verbessern"
-    en: "Tables which contain data (as opposed to layout tables) should contain <code>th</code> elements to mark headers for screen readers and enhance the structure of the document."
+    en: "Tables which contain data (as opposed to layout tables) should contain proper table header elements to mark them for screen readers and enhance the structure of the document."
     nl: "Tabellen die data bevatten (in tegenstelling tot lay-out tabellen) moeten <code>th</code>-elementen bevatten om koppen te markeren voor schermlezers en om de structuur van het document te verbeteren."
   guidelines:
     508:
@@ -5365,7 +5342,7 @@ tagsAreNestedCorrectly:
   tags:
     - "html"
   components:
-      - "htmlSource"
+    - "htmlSource"
   callback: "tagsAreNestedCorrectly"
 tabularDataIsInTable:
   type: "custom"
